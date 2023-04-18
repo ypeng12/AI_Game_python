@@ -1,4 +1,4 @@
-# Artificial-Intelligence - CMSC421 in Univesrity of Maryland - Same as Berkeley-CS188
+# Artificial-Intelligence - CMSC421 in Univesrity of Maryland - Berkeley-CS188
 
 Learned about search problems (A*, CSP, minimax), reinforcement learning, bayes nets, hidden markov models, and machine learning. Completed all homeworks, projects, midterms, and finals in 5 weeks.
 
