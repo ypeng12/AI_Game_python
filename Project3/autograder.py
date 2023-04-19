@@ -17,7 +17,6 @@ import grading
 import imp
 import optparse
 import os
-import pprint
 import re
 import sys
 import projectParams
@@ -135,6 +134,9 @@ def loadModuleString(moduleSource):
     return tmp
 
 
+import py_compile
+
+
 def loadModuleFile(moduleName, filePath):
     with open(filePath, 'r') as f:
         return imp.load_module(moduleName, f, "%s.py" % moduleName, (".py", "r", imp.PY_SOURCE))
@@ -175,6 +177,8 @@ ERROR_HINT_MAP = {
     }
 }
 
+import pprint
+
 
 def splitStrings(d):
     d2 = dict(d)
@@ -191,10 +195,10 @@ def printTest(testDict, solutionDict):
     pp = pprint.PrettyPrinter(indent=4)
     print("Test case:")
     for line in testDict["__raw_lines__"]:
-        print("   |", line)
+        print(("   |", line))
     print("Solution:")
     for line in solutionDict["__raw_lines__"]:
-        print("   |", line)
+        print(("   |", line))
 
 
 def runTest(testName, moduleDict, printTestCase=False, display=None):
@@ -240,8 +244,8 @@ def getTestSubdirs(testParser, testRoot, questionToGrade):
     if questionToGrade != None:
         questions = getDepends(testParser, testRoot, questionToGrade)
         if len(questions) > 1:
-            print('Note: due to dependencies, the following tests will be run: %s' %
-                  ' '.join(questions))
+            print(('Note: due to dependencies, the following tests will be run: %s' %
+                  ' '.join(questions)))
         return questions
     if 'order' in problemDict:
         return problemDict['order'].split()
@@ -339,6 +343,12 @@ if __name__ == '__main__':
     if options.generateSolutions:
         confirmGenerate()
     codePaths = options.studentCode.split(',')
+    # moduleCodeDict = {}
+    # for cp in codePaths:
+    #     moduleName = re.match('.*?([^/]*)\.py', cp).group(1)
+    #     moduleCodeDict[moduleName] = readFile(cp, root=options.codeRoot)
+    # moduleCodeDict['projectTestClasses'] = readFile(options.testCaseCode, root=options.codeRoot)
+    # moduleDict = loadModuleDict(moduleCodeDict)
 
     moduleDict = {}
     for cp in codePaths:
