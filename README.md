@@ -1,6 +1,6 @@
 # Artificial-Intelligence - CMSC421 in Univesrity of Maryland - Berkeley-CS188
 
-Learned about search problems (A*, CSP, minimax), reinforcement learning, bayes nets, hidden markov models, and machine learning. Completed all homeworks, projects, midterms, and finals in 5 weeks.
+Learned about search problems (A*, CSP, minimax), reinforcement learning, bayes nets, hidden markov models, and machine learning. Completed all homeworks, projects, midterms, and finals 
 
 ![UI V2](https://github.com/molson194/Artificial-Intelligence-Berkeley-CS188/blob/master/Photos/Completion.png)
 
