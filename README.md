@@ -2,7 +2,6 @@
 
 Learned about search problems (A*, CSP, minimax), reinforcement learning, bayes nets, hidden markov models, and machine learning. Completed all homeworks, projects, midterms, and finals 
 
-![UI V2](https://github.com/molson194/Artificial-Intelligence-Berkeley-CS188/blob/master/Photos/Completion.png)
 
 ## Project 1
 
